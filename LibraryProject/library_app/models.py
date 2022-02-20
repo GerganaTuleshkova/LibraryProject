@@ -1,0 +1,24 @@
+from django.db import models
+
+
+class Profile(models.Model):
+    first_name = models.CharField(
+        max_length=30,
+    )
+    last_name = models.CharField(
+        max_length=30,
+    )
+    image = models.URLField()
+
+
+class Book(models.Model):
+    title = models.CharField(
+        max_length=30,
+    )
+    description = models.TextField()
+    image = models.URLField(
+        verbose_name='Image URL',
+    )
+    type = models.CharField(
+        max_length=30
+    )
